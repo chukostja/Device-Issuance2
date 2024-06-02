@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
 const mongoose = require('mongoose')
-const Device = require('./models/device');
+const Device = require('./models/device')
 
 mongoose.connect('mongodb://localhost:27017/VirittamoDeviceIssuance')
 
@@ -17,7 +17,7 @@ mongoose.connection.on('error', (err) => {
 app.use(bodyParser.json())
 
 app.post('/api/registerdevice', async (req, res) => {
-  console.log('posted something')
+  console.log('Posted something')
   try {
     const {deviceID, deviceName, manufacturer} = req.body
 
