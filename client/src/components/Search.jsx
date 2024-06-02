@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 export default function Search() {
-  const [deviceID, setDeviceID] = useState('');
+  const [deviceID, setDeviceID] = useState('')
 
   async function handleSubmit() {
     const res = await fetch('http://localhost:5173/', {

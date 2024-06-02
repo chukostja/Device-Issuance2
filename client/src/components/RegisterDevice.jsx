@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 
 export default function RegisterDevice() {
-  const [deviceID, setDeviceID] = useState('');
-  const [deviceName, setDeviceName] = useState('');
-  const [manufacturer, setManufacturer] = useState('');
+  const [deviceID, setDeviceID] = useState('')
+  const [deviceName, setDeviceName] = useState('')
+  const [manufacturer, setManufacturer] = useState('')
 
   async function handleSubmit() {
     console.log('Sending '+JSON.stringify({

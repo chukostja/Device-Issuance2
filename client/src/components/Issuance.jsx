@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 
 export default function Issuance() {
-  const [deviceID, setDeviceID] = useState('');
-  const [recipientId, setRecipientId] = useState('');
-  const [issuanceDate, setIssuanceDate] = useState('');
+  const [deviceID, setDeviceID] = useState('')
+  const [recipientId, setRecipientId] = useState('')
+  const [issuanceDate, setIssuanceDate] = useState('')
 
   async function handleSubmit() {
     const res = await fetch('http://localhost:5173/api/issuance', {
