@@ -1,0 +1,31 @@
+Using npx create-react-app to create the initial scaffolding of the project
+
+Device Issuance:
+  Database Schema:
+    1. Recipient model: _id(mongoose.Schema.Types.ObjectId, required), surname(string, required), firstname(string), department(for now just name:string, but ), possibly some contact info like phone, email, address etc
+    2. Device model: id/device number(unique int), device name(string), manufacrurer details(probably only name or an object if needed), possibly type
+    3. Issuance model: Issuance model references both Recipient and Device models using their _id fields. This creates a many-to-many relationship between devices and recipients through the Issuance model.dates of issuance and returning, id's of device and recipient from relevant tables. Issuance date if empty defaults to current moment.
+
+  Validate the data:
+    some preliminary validation should happen on front end so that users get responsive hints for fixing small typos, but there will need to be a proper back end validator that ensures security
+
+  IAM handling with authentication and authorization; different roles at least for administators and ordinary users. Possibly OAuth or jsonwebtoken(JWT)
+
+  Logging and Error Handling: logs for tracking use and not showing all errors to user.
+
+  Performance?
+
+  UI: mobile first, responsivness?
+
+Device Search:
+
+Device Information:
+  probably a less detailed version for just looking over devices and a more detailed version for looking through each issuance, return and other detail of a particular device
+
+TODO:
+  all IDs might already exist(as ids used in a different system for devices and personal logins for recipients. But need to make sure with the client before making changes.) If exist maybe avoid creating unnecessary extra mongoose.ObjectIds.
+  recipient contact information validation in Recipient model(email,phone,address?)
+  a separate type for debices (mobile phone, laptop etc) among other things to simplify search and make it easier to view only devices of a type
+  validate issuedAt<returnedAt<Date.now
+
+Canva color palette: #E7D2CC, #B9B7BD, #868B8E, #EEEDE7
