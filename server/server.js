@@ -17,7 +17,7 @@ mongoose.connection.on('error', (err) => {
 app.use(bodyParser.json())
 
 app.post('/api/registerdevice', async (req, res) => {
-  console.log('Posted something')
+  console.log('Posted something') //Does not reach here
   try {
     const {deviceID, deviceName, manufacturer} = req.body
 

@@ -21,11 +21,11 @@ export default function RegisterDevice() {
       })
     }).then(response => response.json())
     .then(data => {
-      console.log('Success:', data);
+      console.log('Success:', data)
     })
     .catch(error => {
-      console.error('Error:', error);
-    });
+      console.error('Error:', error)
+    })
   }
 
   return (
@@ -47,7 +47,7 @@ export default function RegisterDevice() {
             id="deviceName"
             placeholder='name'
             value={deviceName}
-            onChange={(e) => setDeviceName(e.target.value)}
+            onChange={(f) => setDeviceName(f.target.value)}
           />
           <label htmlFor="manufacturer">Manufacturer:</label>
           <input
@@ -55,7 +55,7 @@ export default function RegisterDevice() {
             id="manufacturer"
             placeholder='manufacturer'
             value={manufacturer}
-            onChange={(e) => setManufacturer(e.target.value)}
+            onChange={(g) => setManufacturer(g.target.value)}
           />
           <button type='submit' onSubmit={handleSubmit}>Issue</button>
       </form>
