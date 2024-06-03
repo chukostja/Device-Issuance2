@@ -1,0 +1,7 @@
+{
+  "name": "device-issuance2",
+  "workspaces": [
+    "server",
+    "client"
+  ]
+}

@@ -26,6 +26,6 @@ const RecipientSchema = new mongoose.Schema({
       // TODO: address
     },
   },
-  { collection: 'Issuance' });
+  { collection: 'Recipient' });
 
 module.exports = mongoose.model('Recipient', RecipientSchema);

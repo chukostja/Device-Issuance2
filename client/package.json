@@ -1,6 +1,10 @@
 {
-  "name": "client",
-  "private": true,
+  "name": "device-issuance2-client",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
